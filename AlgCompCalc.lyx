@@ -1810,7 +1810,7 @@ algoritmo
 \begin_inset Formula $g:\mathbb{N}\times\mathbb{N}\rightarrow\mathbb{N}$
 \end_inset
 
- che in ingresso prenda il numero (di Godel) 
+ che in ingresso prenda il numero (di Gödel) 
 \begin_inset Formula $k$
 \end_inset
 
@@ -1834,7 +1834,7 @@ Questo procedimento si chiama
 \series bold
 aritmetizzazione
 \series default
- dei programmi o godelizzazione.
+ dei programmi o gödelizzazione.
 \end_layout
 
 \end_deeper
