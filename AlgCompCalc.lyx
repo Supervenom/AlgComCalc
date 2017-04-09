@@ -1,0 +1,1870 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usepackage{microtype}
+\usetheme{Frankfurt}
+\usepackage{tikz}
+\usepackage{bm}
+\usetikzlibrary{automata,positioning,arrows.meta}
+\setbeamertemplate{navigation symbols}{}
+\useoutertheme{split}
+\usepackage{ae,aecompl}
+\usepackage[italian]{babel}
+\uselanguage{italian}
+\languagepath{italian}
+\deftranslation[to=italian]{Definition}{Definizione}
+\deftranslation[to=italian]{Examples}{Esempi}
+\deftranslation[to=italian]{Example}{Esempio}
+\deftranslation[to=italian]{Theorem}{Teorema}
+\deftranslation[to=italian]{Corollary}{Corollario}
+\definecolor{blue1}{RGB}{51,51,179}
+\definecolor{blue2}{RGB}{0,0,204}
+\definecolor{blue3}{RGB}{0,0,153}
+\setbeamercolor{author in head/foot}{fg=white, bg=blue3}
+\setbeamercolor{title in head/foot}{fg=white, bg=blue2}
+\setbeamercolor{date in head/foot}{fg=white, bg=blue1}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\end_preamble
+\options handout
+\use_default_options false
+\maintain_unincluded_children false
+\language italian
+\language_package none
+\inputencoding utf8
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.75in
+\topmargin 0.6in
+\rightmargin 0.75in
+\bottommargin 0.6in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Algoritmi, Complessità, Calcolabilità:
+\begin_inset Newline newline
+\end_inset
+
+l'essenza dell'informatica
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Algoritmi, Complessità, Calcolabilità
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Gabriele Vanoni
+\end_layout
+
+\begin_layout Institute
+Politecnico di Milano
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+PoliMi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+12 Aprile 2017
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Insiemi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+assioma di comprensione, Cantor, Frege
+\end_layout
+
+\end_inset
+
+Un'insieme è una collezione di oggetti, caratterizzati da una proprietà.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\Omega=\{x\in\mathbb{N}|\,x>2\}$
+\end_inset
+
+ i.e.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Omega=\{3,4,5,...\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Questa definizione NON è corretta, e porta al paradosso di Russell.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Paradosso di Russel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+Consideriamo l'insieme degli insiemi che non appartengono a se stessi 
+\begin_inset Formula $A=\{x\,|\,x\notin x\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Es.
+ L'insieme 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ dei numeri pari appartiene ad 
+\begin_inset Formula $A$
+\end_inset
+
+, infatti 
+\begin_inset Formula $\mathbb{P}\notin\mathbb{P}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $x\in A\longleftrightarrow x\notin x$
+\end_inset
+
+.
+ Chiediamoci se 
+\begin_inset Formula $A\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\in A\longleftrightarrow A\notin A$
+\end_inset
+
+.
+ Assurdo!!!
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La moderna teoria degli insiemi ZF vieta la costruzione di questo tipo di
+ insiemi 
+\begin_inset Quotes eld
+\end_inset
+
+patologici
+\begin_inset Quotes erd
+\end_inset
+
+, utilizzando assiomi più restrittivi.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Dimostrazioni per induzione
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Il principio di induzione è una caratteristica intrinseca dei 
+\series bold
+numeri naturali
+\series default
+, infatti fa parte degli assiomi di Peano, le regole che li definiscono.
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Principio di induzione
+\end_layout
+
+\end_inset
+
+Sia 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ una proprietà dei numeri naturali.
+ Se 
+\begin_inset Formula $P$
+\end_inset
+
+ è verificata per un 
+\begin_inset Formula $c\in\mathbb{N}$
+\end_inset
+
+ e supponendola vera per 
+\begin_inset Formula $c\leq n\leq k$
+\end_inset
+
+ posso dimostrarla per 
+\begin_inset Formula $n=k+1$
+\end_inset
+
+ allora 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ è valida per ogni 
+\begin_inset Formula $n\geq c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ è vera per 
+\begin_inset Formula $c$
+\end_inset
+
+ allora è vera per 
+\begin_inset Formula $c+1$
+\end_inset
+
+, e quindi per 
+\begin_inset Formula $c+2$
+\end_inset
+
+...
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sfruttando tale principio è possibile costruire 
+\series bold
+dimostrazioni
+\series default
+ di teoremi che riguardino proprietà di numeri naturali.
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Somma dei primi 
+\begin_inset Formula $n$
+\end_inset
+
+ naturali
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\stackrel[h=1]{n}{\sum}h=\frac{n(n+1)}{2}$
+\end_inset
+
+.
+ Dimostrazione per induzione su 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Plain Layout
+
+\shape italic
+Caso base
+\shape default
+: 
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\frac{1\cdot2}{2}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\shape italic
+Ipotesi di induzione
+\shape default
+: suppongo vera la proprietà per 
+\begin_inset Formula $1\leq n\leq k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\shape italic
+Passo induttivo
+\shape default
+: dimostro la proprità per 
+\begin_inset Formula $n=k+1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\stackrel[h=1]{k+1}{\sum}h=\stackrel[h=1]{k}{\sum}h+(k+1)=\frac{k(k+1)}{2}+k+1=\frac{k(k+1)+2k+2}{2}=\frac{k^{2}+3k+2}{2}=\frac{(k+2)(k+1)}{2}=P(k+1).$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Insieme delle parti 
+\begin_inset Formula $\wp(\Omega)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+cardinalità
+\end_layout
+
+\end_inset
+
+La cardinalità di un insieme 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ finito è il numero di elementi che contiene e viene indicata con 
+\begin_inset Formula $\left|\Omega\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+insieme delle parti
+\end_layout
+
+\end_inset
+
+L'insieme delle parti di un insieme 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ è l'insieme 
+\begin_inset Formula $\wp(\Omega)$
+\end_inset
+
+ che contiene tutti i suoi sottoinsiemi.
+\end_layout
+
+\begin_layout Theorem
+La cardinalità dell'insieme delle parti di un insieme finito 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ è 
+\begin_inset Formula $2^{\left|\Omega\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Proof
+Per induzione sulla cardinalità di 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, 
+\begin_inset Formula $\left|\Omega\right|=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Caso base: 
+\begin_inset Formula $n=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ è l'insieme vuoto, l'unico suo sottoinsieme è 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ stesso, per cui 
+\begin_inset Formula $1=2^{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ipotesi d'induzione: supponiamo la proprietà vera per 
+\begin_inset Formula $n\leq k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Passo induttivo: dimostriamo la proprietà per 
+\begin_inset Formula $n=k+1$
+\end_inset
+
+.
+ Consideriamo 
+\begin_inset Formula $\Omega'$
+\end_inset
+
+ ottenuto da 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ togliendo un elemento 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Per ipotesi di induzione ha 
+\begin_inset Formula $2^{k}$
+\end_inset
+
+ sottoinsiemi.
+ Possiamo ottenere tutti i sottoinsiemi considerando che ogni elemento di
+ 
+\begin_inset Formula $\wp(\Omega')$
+\end_inset
+
+ dovrà essere considerato due volte: una volta così com'è e una volta aggiungend
+o 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Perciò 
+\begin_inset Formula $\left|\wp(\Omega)\right|=2\wp(\Omega')=2\cdot2^{k}=2^{k+1}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+di Cantor
+\end_layout
+
+\end_inset
+
+Per ogni insieme 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, 
+\begin_inset Formula $\left|\wp(\Omega)\right|>\left|\Omega\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Proof
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+da scrivere
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Funzioni
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Una funzione 
+\begin_inset Formula $f$
+\end_inset
+
+ è una corrispondenza tra due insiemi 
+\begin_inset Formula $A$
+\end_inset
+
+ e 
+\begin_inset Formula $B$
+\end_inset
+
+ che associa ad ogni elemento di 
+\begin_inset Formula $A$
+\end_inset
+
+ uno e un solo elemento di 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ci occuperemo in particolare di funzioni da 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ ad 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f=f(n)=n+1$
+\end_inset
+
+ i.e.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $f(0)=1$
+\end_inset
+
+, 
+\begin_inset Formula $f(1)=2$
+\end_inset
+
+, 
+\begin_inset Formula $f(2)=3$
+\end_inset
+
+, ...
+\end_layout
+
+\begin_layout Standard
+Possiamo immaginarla come una tabella infinita:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(n)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Che cos'è un algoritmo?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dare una definizione precisa e rigorosa è difficile (ma si può, anche in
+ diversi termini) e ci ritorniamo dopo.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il termine è sulla bocca di tutti: solo un mese fa si parlava dell'algoritmo
+ sbagliato per il calcolo delle tariffe degli abbonamenti del treno.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex PresentationMode
+status open
+
+\begin_layout Plain Layout
+Intuitivamente sapete indicarmi degli esempi e descrivermi il loro funzionamento
+?
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Example
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+Il metodo che utilizziamo solitamente per sommare due numeri interi è un
+ algoritmo.
+ Partendo dalle unità, sommiamo in colonna le cifre aggiungendo i riporti
+ se necessario.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Possiamo dire informalmente che un 
+\series bold
+algoritmo
+\series default
+ è una procedura che dato un 
+\series bold
+input
+\series default
+ restituisce un 
+\series bold
+output
+\series default
+, utilizzando un 
+\series bold
+numero finito
+\series default
+ di 
+\series bold
+regole
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Considerando che possiamo 
+\series bold
+codificare
+\series default
+ sotto forma di 
+\series bold
+numeri naturali
+\series default
+ sia input sia output gli 
+\series bold
+algoritmi
+\series default
+ sono un sottoinsieme delle 
+\series bold
+funzioni
+\series default
+ da 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ ad 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+La complessità degli algoritmi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+In genere si è interessati a trovari 
+\series bold
+algoritmi efficienti
+\series default
+, veloci per risolvere i problemi.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La misura di efficienza di un algoritmo si chiama 
+\series bold
+complessità computazionale
+\series default
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Normalmente viene espressa come una funzione della 
+\series bold
+dimensione
+\series default
+ dell'
+\series bold
+input
+\series default
+.
+ Per esempio 
+\begin_inset Formula $C=n$
+\end_inset
+
+, 
+\begin_inset Formula $C=n^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $C=2^{n}$
+\end_inset
+
+.
+ (Trascuro i dettagli della notazione O-grande).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Esempi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Ricerca binaria.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Plain Layout
+Se abbiamo una lista di 
+\begin_inset Formula $n$
+\end_inset
+
+ oggetti ordinata, ad esempio un dizionario, e vogliamo trovare uno specifico
+ elemento un buon metodo è partire dal centro della lista.
+ Se l'abbiamo trovato abbiamo finito altrimenti sappiamo se dobbiamo cercare
+ nella prima metà o nella seconda.
+ In ogni caso anche lì partiremo dalla metà iterando il procedimento.
+ In questa maniera il massimo numero di tentativi sarà il massimo numero
+ di volte per cui possiamo dividere la lista per due ovvero 
+\begin_inset Formula $k$
+\end_inset
+
+ tale che 
+\begin_inset Formula $\frac{n}{2^{k}}=1$
+\end_inset
+
+, cioè 
+\begin_inset Formula $k=\log_{2}n$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+La somma in colonna.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Plain Layout
+Se consideriamo come dimensione dell'input 
+\begin_inset Formula $n$
+\end_inset
+
+ la lunghezza dei numeri da sommare, il tempo che impieghiamo per la somma
+ è proporzionale ad 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Un algoritmo di ordinamento.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Plain Layout
+Consideriamo una lista di 
+\begin_inset Formula $n$
+\end_inset
+
+ numeri.
+ Volgiamo ordinarla in ordine crescente.
+ Un modo semplice è quello di prendere il minimo e metterlo in testa, poi
+ considerare i rimanenti, prendere il minimo e metterlo al secondo posto,
+ e così via.
+ Per cercare il minimo dobbiamo scandire tutta la lista facendo quindi 
+\begin_inset Formula $n$
+\end_inset
+
+ operazioni, poi per trovare il 
+\begin_inset Quotes eld
+\end_inset
+
+secondo minimo
+\begin_inset Quotes erd
+\end_inset
+
+ dovremo farne 
+\begin_inset Formula $n-1$
+\end_inset
+
+ e così via.
+ Il numero di operazioni è quindi 
+\begin_inset Formula $\stackrel[k=1]{n}{\sum}k=\frac{n(n+1)}{2}\simeq n^{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Il problema del commesso viaggiatore.
+ 
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Plain Layout
+Consideriamo un insieme di città collegate da strade.
+ Dobbiamo trovare il cammino di lunghezza minima che le colleghi tutte,
+ che passi da ogni città una volta sola e che abbia la stessa città di partenza
+ e arrivo.
+ Vedremo che sostanzialmente non esiste un algoritmo che nel caso peggiore
+ non ci costringa a provare tutti i possibili cammini che sono 
+\begin_inset Formula $n!$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Classi di complessità
+\series bold
+ P
+\series default
+ e 
+\series bold
+NP
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+La classe di problemi 
+\begin_inset Formula $\mathsf{\mathbf{P}}$
+\end_inset
+
+ è composta da tutti i problemi che sono risolvibili in tempo polinomiale
+ (problemi trattabili).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+La classe di problemi 
+\begin_inset Formula $\mathsf{\mathbf{NP}}$
+\end_inset
+
+ è composta da tutti i problemi la cui soluzione è verificabile in tempo
+ polinomiale (problemi intrattabili).
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\mathsf{\mathbf{P}}\subseteq\mathsf{\mathbf{NP}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Proof
+Chiaramente se un problema è risolvibile in tempo polinomiale posso verificare
+ una particolare soluzione in tempo polinomiale risolvendo il problema e
+ confrontando la soluzione con quella che volevo verificare.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ci chiediamo se l'inclusione sia stretta, ovvero se ci siano dei problemi
+ che stanno in 
+\begin_inset Formula $\mathsf{\mathbf{NP}}$
+\end_inset
+
+ ma non in 
+\begin_inset Formula $\mathsf{\mathbf{P}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La risposta vale 
+\series bold
+1 milione
+\series default
+ di dollari!
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+NP
+\series default
+-completezza
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Esistono alcuni problemi, chiamati 
+\series bold
+NP
+\series default
+-completi, che sono i più difficili della classe 
+\begin_inset Formula $\mathsf{\mathbf{NP}}$
+\end_inset
+
+.
+ Sono tutti della stessa difficoltà e le loro istanze possono essere trasformate
+ in quelle di un altro problema 
+\series bold
+NP
+\series default
+-completo in tempo polinomiale.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sono problemi di importante interesse pratico:
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Alcuni problemi 
+\series bold
+NP
+\series default
+-completi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Il problema del commesso viaggiatore
+\end_layout
+
+\begin_layout Itemize
+Il problema dello zaino
+\end_layout
+
+\begin_layout Itemize
+La soddisfacibilità delle formule della logica proposizionale (SAT)
+\end_layout
+
+\begin_layout Itemize
+Il Sudoku (
+\begin_inset Formula $n^{2}\times n^{2}$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Se trovassimo una soluzione polinomiale anche per uno solo dei seguenti
+ problemi, vorrebbe dire che l'avremmo trovata per tutti e che 
+\begin_inset Formula $\mathsf{\mathbf{P}}=\mathsf{\mathbf{NP}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tutti i problemi sono risolvibili algoritmicamente?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+L'
+\series bold
+informatica
+\series default
+ moderna è nata per rispondere a questa domanda.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per prima cosa dobbiamo capire che cosa vuol dire algoritmicamente.
+ 
+\series bold
+Church
+\series default
+ e 
+\series bold
+Turing
+\series default
+ hanno definito nel 1936 due 
+\series bold
+modelli astratti
+\series default
+ di 
+\series bold
+algoritmo
+\series default
+, rispettivamente il 
+\series bold
+
+\begin_inset Formula $\lambda$
+\end_inset
+
+-calcolo
+\series default
+ e la 
+\series bold
+macchina di Turing
+\series default
+.
+ Noi ci accontentiamo di dire che un algoritmo è un 
+\series bold
+programma
+\series default
+ scritto in un qualunque 
+\series bold
+linguaggio di programmazione
+\series default
+ (C, Java, Python, etc) che termina.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Possiamo farlo sulla base di un importante risultato: tutti i formalismi
+ di potenza massima conosciuti sono 
+\series bold
+equivalenti
+\series default
+.
+ In altre parole:
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Tesi di Church-Turing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Una funzione intuitivamente calcolabile è calcolabile da una macchina di
+ Turing (o formalismo equivalente).
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Quanti sono gli algoritmi?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Se pensiamo all'insieme di tutti gli 
+\series bold
+algoritmi
+\series default
+ come l'insieme di tutti i 
+\series bold
+programmi
+\series default
+ 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ capiamo subito che il loro numero è 
+\series bold
+infinito
+\series default
+.
+ Però capiamo anche che li possiamo 
+\series bold
+enumerare
+\series default
+ cioè considerare in ordine i programmi 
+\begin_inset Formula $\pi_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\pi_{2}$
+\end_inset
+
+,
+\begin_inset Formula $\pi_{3}$
+\end_inset
+
+...
+\end_layout
+
+\begin_layout Standard
+Possiamo cioè metterli in corrispondenza con i 
+\series bold
+numeri naturali
+\series default
+, costruendo una funzione 
+\begin_inset Formula $f:\mathbb{N}\rightarrow\mathsf{\varPi}$
+\end_inset
+
+ tale che 
+\begin_inset Formula $f(k)=\pi_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'enumerazione può essere fatta da un 
+\series bold
+algoritmo
+\series default
+ e quindi siamo in grado di costruire un programma 
+\begin_inset Formula $g:\mathbb{N}\times\mathbb{N}\rightarrow\mathbb{N}$
+\end_inset
+
+ che in ingresso prenda il numero (di Godel) 
+\begin_inset Formula $k$
+\end_inset
+
+ del programma 
+\begin_inset Formula $\pi_{k}$
+\end_inset
+
+ da eseguire, e l'input 
+\begin_inset Formula $x$
+\end_inset
+
+ del programma stesso calcolando così 
+\begin_inset Formula $g(k,x)=\pi_{k}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Questo procedimento si chiama 
+\series bold
+aritmetizzazione
+\series default
+ dei programmi o godelizzazione.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Un problema indecidibile
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Un classico problema indecidibile è il problema dell'arresto, ovvero trovare
+ un algoritmo che decida, dati in ingresso un programma e il suo input se
+ questo terminerà o meno.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
