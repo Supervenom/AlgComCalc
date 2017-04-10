@@ -157,6 +157,455 @@ PoliMi
 12 Aprile 2017
 \end_layout
 
+\begin_layout Standard
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textsf{Abstract}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Siamo circondati dalle tecnologie informatiche, ma che cosa le fa funzionare
+ davvero? Sentiamo ogni giorno parlare di algoritmi, ma che cosa rappresentano?
+ I computer possono risolvere qualsiasi problema? Con quale velocità? La
+ risposta a queste domande sta nella teoria, ed è sorprendentemente indipendente
+ dalla tecnologia.
+ Cercherò nella maniera più chiara possibile di dare delle risposte raccontando
+ alcuni degli aspetti più interessanti di una scienza che spesso non è considera
+ta tale, nonostante tra i suoi fondatori vanti nomi del calibro di Gödel
+ e Turing, che la idearono ben prima della nascita dei computer.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex PresentationMode
+status open
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Indice
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduzione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex PresentationMode
+status open
+
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\size larger
+Introduzione
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Disclaimer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Il contenuto di questa lezione copre normalmente un corso universitario
+ di almeno 
+\series bold
+50 ore
+\series default
+.
+ Non pretendo quindi di essere esauriente nè che capiate tutto.
+ Lo scopo è quello di farvi vedere alcune delle principali 
+\series bold
+idee
+\series default
+ dell'informatica teorica.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Non sempre presenterò gli argomenti in maniera rigorosa e formale perché
+ ciò richiederebbe tecnicismi matematici pesanti.
+ Cercherò di fare affidamento sulla vostra 
+\series bold
+intuizione
+\series default
+.
+ Per una trattazione completa ma comunque accessibile si vedano i testi
+ in bibliografia.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Informatica, alcune definizioni
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Quotation
+\begin_inset Quotes eld
+\end_inset
+
+Computer science is no more about computers than astronomy is about telescopes
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+\align right
+Edsger Dijkstra
+\end_layout
+
+\begin_layout Quotation
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Quotes eld
+\end_inset
+
+I shall be sorry if computer science ever flies apart into two disciplines,
+ one logical and one technological
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+\align right
+Robin Milner
+\end_layout
+
+\begin_layout Quotation
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Quotes eld
+\end_inset
+
+Il padre dell'informatica è l'ingegneria, ma la madre è la logica
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+\align right
+Maria Emilia Maietti
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Un problema anche linguistico
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In italiano il termine informatica è omnicomprensivo.
+ In inglese esistono due differenti locuzioni: 
+\series bold
+computer science
+\series default
+ e 
+\series bold
+information technology
+\series default
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Storicamente l'informatica nasce nei dipartimenti di 
+\series bold
+matematica
+\series default
+ delle università, venti anni prima della creazione del primo calcolatore
+ elettronico.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Quando si comincia la costruzione dei calcolatori allora entrano in campo
+ gli 
+\series bold
+ingegneri
+\series default
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Oggi anche chi fa un sito web è considerato un informatico.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ci occuperemo di quella che viene chiamata 
+\series bold
+informatica teorica
+\series default
+, cioè dei fondamenti matematici alla base della disciplina.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Preliminari matematici
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex PresentationMode
+status open
+
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\size larger
+Preliminari matematici
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Frame
 \begin_inset Argument 4
 status open
@@ -182,6 +631,19 @@ assioma di comprensione, Cantor, Frege
 \end_inset
 
 Un'insieme è una collezione di oggetti, caratterizzati da una proprietà.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -197,10 +659,36 @@ Un'insieme è una collezione di oggetti, caratterizzati da una proprietà.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Questa definizione NON è corretta, e porta al paradosso di Russell.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -320,6 +808,19 @@ Il principio di induzione è una caratteristica intrinseca dei
 numeri naturali
 \series default
 , infatti fa parte degli assiomi di Peano, le regole che li definiscono.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Block
@@ -362,6 +863,19 @@ Sia
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -382,6 +896,19 @@ Se
 \end_inset
 
 ...
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -397,6 +924,19 @@ Sfruttando tale principio è possibile costruire
 dimostrazioni
 \series default
  di teoremi che riguardino proprietà di numeri naturali.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -589,7 +1129,11 @@ Per induzione sulla cardinalità di
 \end_layout
 
 \begin_layout Proof
-Caso base: 
+
+\shape italic
+Caso base
+\shape default
+: 
 \begin_inset Formula $n=0$
 \end_inset
 
@@ -610,7 +1154,11 @@ Caso base:
 \end_layout
 
 \begin_layout Proof
-Ipotesi d'induzione: supponiamo la proprietà vera per 
+
+\shape italic
+Ipotesi d'induzione
+\shape default
+: supponiamo la proprietà vera per 
 \begin_inset Formula $n\leq k$
 \end_inset
 
@@ -618,7 +1166,11 @@ Ipotesi d'induzione: supponiamo la proprietà vera per
 \end_layout
 
 \begin_layout Proof
-Passo induttivo: dimostriamo la proprietà per 
+
+\shape italic
+Passo induttivo
+\shape default
+: dimostriamo la proprietà per 
 \begin_inset Formula $n=k+1$
 \end_inset
 
@@ -690,16 +1242,64 @@ Per ogni insieme
 status open
 
 \begin_layout Proof
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-da scrivere
-\end_layout
-
+Certamente 
+\begin_inset Formula $\left|\wp(\Omega)\right|\geq\left|\Omega\right|$
 \end_inset
 
+.
+ Possiamo infatti trovare una funzione iniettiva 
+\begin_inset Formula $f:\Omega\rightarrow\wp(\Omega)$
+\end_inset
 
+ cioè che mappi ogni elemento di 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ su un diverso elemento di 
+\begin_inset Formula $\wp(\Omega)$
+\end_inset
+
+.
+ Per esempio 
+\begin_inset Formula $f(x)=\left\{ x\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Dobbiamo ora far vedere che non esiste una 
+\begin_inset Formula $g:\Omega\rightarrow\wp(\Omega)$
+\end_inset
+
+ suriettiva.
+ Supponiamo che esista per assurdo.
+ Consideriamo l'insieme 
+\begin_inset Formula $T=\left\{ x\in\Omega\,|\,x\notin g(x)\right\} .$
+\end_inset
+
+ Sia 
+\begin_inset Formula $x$
+\end_inset
+
+ un elemento di 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ per cui 
+\begin_inset Formula $T=g(x)$
+\end_inset
+
+, esiste per la suriettività di 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ Allora 
+\begin_inset Formula $x\in T\longleftrightarrow x\in g(x)\longleftrightarrow x\not\in g(x).$
+\end_inset
+
+ Contraddizione.
 \end_layout
 
 \end_inset
@@ -930,6 +1530,37 @@ Possiamo immaginarla come una tabella infinita:
 
 \end_deeper
 \end_deeper
+\begin_layout Section
+Algoritmi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex PresentationMode
+status open
+
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\size larger
+Algoritmi
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+L'idea
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1107,6 +1738,10 @@ funzioni
 \end_layout
 
 \end_deeper
+\begin_layout Subsection
+Complessità
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1175,6 +1810,10 @@ Normalmente viene espressa come una funzione della
 \series bold
 dimensione
 \series default
+ 
+\begin_inset Formula $n$
+\end_inset
+
  dell'
 \series bold
 input
@@ -1604,6 +2243,10 @@ Se trovassimo una soluzione polinomiale anche per uno solo dei seguenti
 \end_layout
 
 \end_deeper
+\begin_layout Subsection
+Calcolabilità
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1788,7 +2431,7 @@ numeri naturali
 \end_inset
 
  tale che 
-\begin_inset Formula $f(k)=\pi_{k}$
+\begin_inset Formula $f(y)=\pi_{y}$
 \end_inset
 
 .
@@ -1806,16 +2449,20 @@ L'enumerazione può essere fatta da un
 \series bold
 algoritmo
 \series default
- e quindi siamo in grado di costruire un programma 
+ e quindi siamo in grado di costruire un programma, chiamato 
+\series bold
+programma universale
+\series default
+, 
 \begin_inset Formula $g:\mathbb{N}\times\mathbb{N}\rightarrow\mathbb{N}$
 \end_inset
 
  che in ingresso prenda il numero (di Gödel) 
-\begin_inset Formula $k$
+\begin_inset Formula $y$
 \end_inset
 
  del programma 
-\begin_inset Formula $\pi_{k}$
+\begin_inset Formula $\pi_{y}$
 \end_inset
 
  da eseguire, e l'input 
@@ -1823,7 +2470,7 @@ algoritmo
 \end_inset
 
  del programma stesso calcolando così 
-\begin_inset Formula $g(k,x)=\pi_{k}(x)$
+\begin_inset Formula $g(y,x)=\pi_{y}(x)$
 \end_inset
 
 .
@@ -1860,9 +2507,159 @@ Un problema indecidibile
 
 \begin_deeper
 \begin_layout Standard
-Un classico problema indecidibile è il problema dell'arresto, ovvero trovare
- un algoritmo che decida, dati in ingresso un programma e il suo input se
- questo terminerà o meno.
+Un classico problema 
+\series bold
+indecidibile
+\series default
+ è il 
+\series bold
+problema dell'arresto
+\series default
+, ovvero trovare un algoritmo che decida, dati in ingresso il numero di
+ Gödel 
+\begin_inset Formula $y$
+\end_inset
+
+ di un programma 
+\begin_inset Formula $\pi_{y}$
+\end_inset
+
+ e il suo input 
+\begin_inset Formula $x$
+\end_inset
+
+ se questo terminerà o meno, in formule:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h(y,x)=\begin{cases}
+1 & \mbox{se }\pi_{y}(x)\mbox{ termina}\\
+0 & \mbox{altrimenti}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+di Church
+\end_layout
+
+\end_inset
+
+La funzione 
+\begin_inset Formula $h$
+\end_inset
+
+ non è algoritmicamente calcolabile.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Proof
+Sia per assurdo 
+\begin_inset Formula $h$
+\end_inset
+
+ calcolabile.
+ Allora è calcolabile anche
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+k(x)=\begin{cases}
+1 & \mbox{se }h(x,x)=0\mbox{ (cioè se \ensuremath{\pi_{x}(x)} non termina)}\\
+\mbox{non termina} & \mbox{altrimenti (cioè se \ensuremath{\pi_{x}(x)} termina)}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+quindi esiste un programma 
+\begin_inset Formula $\pi_{z}$
+\end_inset
+
+ che calcola 
+\begin_inset Formula $k$
+\end_inset
+
+, cioè 
+\begin_inset Formula $\pi_{z}(x)=k(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Consideriamo allora 
+\begin_inset Formula $k(z)$
+\end_inset
+
+, vediamo cioè cosa succede per un programma 
+\begin_inset Formula $\pi_{z}$
+\end_inset
+
+ che deve decidere la sua stessa terminazione.
+\end_layout
+
+\begin_layout Proof
+Se 
+\begin_inset Formula $k(z)=1$
+\end_inset
+
+ (termina), allora 
+\begin_inset Formula $h(z,z)=0$
+\end_inset
+
+, cioè 
+\begin_inset Formula $\pi_{z}(z)=k(z)$
+\end_inset
+
+ non termina, quindi abbiamo una contraddizione.
+\end_layout
+
+\begin_layout Proof
+Se 
+\begin_inset Formula $k(z)$
+\end_inset
+
+ non termina allora 
+\begin_inset Formula $h(z,z)=1$
+\end_inset
+
+, cioè 
+\begin_inset Formula $\pi_{z}(z)=k(z)$
+\end_inset
+
+ termina, altra contraddizione.
+\end_layout
+
+\begin_layout Proof
+Quindi 
+\begin_inset Formula $h$
+\end_inset
+
+ non è calcolabile!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper

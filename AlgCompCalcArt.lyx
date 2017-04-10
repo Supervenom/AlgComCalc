@@ -23,6 +23,7 @@
 \renewcommand*\pagemark{{\nobreakspace\thepage}}
 \addtokomafont{pageheadfoot}{\upshape}
 \end_preamble
+\options twoside
 \use_default_options false
 \maintain_unincluded_children false
 \language italian
@@ -72,6 +73,8 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 4cm
+\rightmargin 3cm
 \bottommargin 1.5in
 \secnumdepth 3
 \tocdepth 3
