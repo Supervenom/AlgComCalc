@@ -137,6 +137,31 @@ Algoritmi, Complessità, Calcolabilità
 
 \begin_layout Author
 Gabriele Vanoni
+\begin_inset Flex ArticleMode
+status open
+
+\begin_layout Plain Layout
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Politecnico di Milano,
+\begin_inset Newline newline
+\end_inset
+
+
+\family typewriter
+gabriele.vanoni@mail.polimi.it
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Institute
@@ -1094,6 +1119,19 @@ La cardinalità di un insieme
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1122,6 +1160,19 @@ L'insieme delle parti di un insieme
 \end_inset
 
  che contiene tutti i suoi sottoinsiemi.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Theorem
@@ -1134,6 +1185,19 @@ La cardinalità dell'insieme delle parti di un insieme finito
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1259,6 +1323,19 @@ Per ogni insieme
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1331,6 +1408,14 @@ Dobbiamo ora far vedere che non esiste una
 
 \end_layout
 
+\begin_layout Standard
+Il teorema si applica anche agli insiemi infiniti, definendo una 
+\series bold
+gerarchia
+\series default
+.
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -1375,6 +1460,19 @@ Una funzione
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1387,6 +1485,19 @@ Ci occuperemo in particolare di funzioni da
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -1730,7 +1841,19 @@ numero finito
 regole
 \series default
 .
- 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2095,6 +2218,19 @@ La classe di problemi
 
  è composta da tutti i problemi che sono risolvibili in tempo polinomiale
  (problemi trattabili).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2111,6 +2247,19 @@ La classe di problemi
 
  è composta da tutti i problemi la cui soluzione è verificabile in tempo
  polinomiale (problemi intrattabili).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Theorem
@@ -2118,6 +2267,19 @@ La classe di problemi
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2146,6 +2308,19 @@ Ci chiediamo se l'inclusione sia stretta, ovvero se ci siano dei problemi
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2205,6 +2380,19 @@ NP
 NP
 \series default
 -completo in tempo polinomiale.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2216,6 +2404,19 @@ NP
 
 \begin_layout Standard
 Sono problemi di importante interesse pratico:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout ExampleBlock
@@ -2254,6 +2455,19 @@ Il Sudoku (
 \end_inset
 
 )
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2298,6 +2512,19 @@ L'
 informatica
 \series default
  moderna è nata per rispondere a questa domanda.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2338,6 +2565,19 @@ algoritmo
 macchina di Turing
 \series default
 .
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
  Noi ci accontentiamo di dire che un algoritmo è un 
 \series bold
 programma
@@ -2347,6 +2587,19 @@ programma
 linguaggio di programmazione
 \series default
  (C, Java, Python, etc) che termina.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2364,6 +2617,19 @@ equivalenti
 \series default
 .
  In altre parole:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Block
@@ -2443,6 +2709,19 @@ enumerare
 \end_inset
 
 ...
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2459,6 +2738,19 @@ numeri naturali
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2498,6 +2790,19 @@ programma universale
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2552,7 +2857,20 @@ problema dell'arresto
 \begin_inset Formula $x$
 \end_inset
 
- se questo terminerà o meno, in formule:
+ se questo terminerà o meno 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
+
+\end_inset
+
+ , in formule:
 \end_layout
 
 \begin_layout Standard
@@ -2560,9 +2878,25 @@ problema dell'arresto
 \[
 h(y,x)=\begin{cases}
 1 & \mbox{se }\pi_{y}(x)\mbox{ termina}\\
-0 & \mbox{altrimenti}
+0 & \mbox{altrimenti (cioè se \ensuremath{\pi_{y}(x)} non termina)}
 \end{cases}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pause
+\end_layout
 
 \end_inset
 
@@ -2646,7 +2980,7 @@ Se
 \begin_inset Formula $k(z)=1$
 \end_inset
 
- (termina), allora 
+ (cioè termina), allora 
 \begin_inset Formula $h(z,z)=0$
 \end_inset
 
@@ -2727,6 +3061,38 @@ Riferimenti bibliografici
 
 \begin_deeper
 \begin_layout Standard
+\begin_inset Flex Only
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+presentation
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnotesize{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintAll"
