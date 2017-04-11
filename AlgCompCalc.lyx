@@ -315,7 +315,8 @@ Il contenuto di questa lezione copre normalmente un corso universitario
 \series bold
 idee
 \series default
- dell'informatica teorica.
+ dell'informatica teorica, in modo che possiate capire di cosa tratta questa
+ materia.
 \begin_inset ERT
 status open
 
@@ -478,7 +479,7 @@ Un problema anche linguistico
 \begin_deeper
 \begin_layout Itemize
 In italiano il termine informatica è omnicomprensivo.
- In inglese esistono due differenti locuzioni: 
+ In inglese esistono almeno due differenti locuzioni: 
 \series bold
 computer science
 \series default
@@ -625,7 +626,7 @@ Insiemi
 status open
 
 \begin_layout Plain Layout
-assioma di comprensione, Cantor, Frege
+assioma di comprensione di Cantor e Frege
 \end_layout
 
 \end_inset
@@ -675,7 +676,11 @@ pause
 \end_layout
 
 \begin_layout Standard
-Questa definizione NON è corretta, e porta al paradosso di Russell.
+Questa definizione NON è corretta, e porta al 
+\series bold
+paradosso
+\series default
+ di Russell.
 \begin_inset ERT
 status open
 
@@ -768,8 +773,11 @@ Es.
 \end_layout
 
 \begin_layout Standard
-La moderna teoria degli insiemi ZF vieta la costruzione di questo tipo di
- insiemi 
+La moderna teoria degli insiemi 
+\series bold
+ZF
+\series default
+ vieta la costruzione di questo tipo di insiemi 
 \begin_inset Quotes eld
 \end_inset
 
@@ -807,7 +815,11 @@ Il principio di induzione è una caratteristica intrinseca dei
 \series bold
 numeri naturali
 \series default
-, infatti fa parte degli assiomi di Peano, le regole che li definiscono.
+, infatti fa parte degli 
+\series bold
+assiomi di Peano
+\series default
+, le regole che li definiscono.
 \begin_inset ERT
 status open
 
@@ -1065,7 +1077,19 @@ La cardinalità di un insieme
 \begin_inset Formula $\Omega$
 \end_inset
 
- finito è il numero di elementi che contiene e viene indicata con 
+ finito è 
+\begin_inset Formula $n$
+\end_inset
+
+ se 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ contiene 
+\begin_inset Formula $n$
+\end_inset
+
+ elementi e viene indicata con 
 \begin_inset Formula $\left|\Omega\right|$
 \end_inset
 
@@ -2656,6 +2680,58 @@ Quindi
 
  non è calcolabile!
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Only
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+presentation
+\end_layout
+
+\end_inset
+
+Riferimenti bibliografici
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "AlgCompCalc"
+options "plain"
 
 \end_inset
 
